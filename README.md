@@ -104,7 +104,7 @@ What would be useful:
 
 The goal is to validate this detection approach on real reactor data and improve the algorithm together. If the method works on your data, you get a better tool for predicting electrode end-of-life. If it doesn't, we learn something useful about where the model breaks down.
 
-Get in touch: open an issue on this repo or reach out on X — [@Tocki28](https://x.com/Tocki28)
+Get in touch: open an issue on this repo or reach out on X — [@02iTAG](https://x.com/02iTAG)
 
 ## Connection to the broader project
 
