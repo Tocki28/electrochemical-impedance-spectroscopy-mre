@@ -89,7 +89,7 @@ The next iteration will compare CUSUM against three lightweight alternatives, al
 - **Kalman filter on Rct** — optimal estimator that gives a predicted time-to-failure with uncertainty bounds, not just a binary alarm
 - **Multi-feature Mahalanobis distance** — monitors all four Randles parameters jointly ([Rs, Rct, Cdl, sigma]), exploiting the fact that oxidation and evaporation leave different fingerprints across the full parameter set
 
-Neural networks are explicitly excluded: the target deployment is an autonomous controller on constrained embedded hardware, possibly lunar. Interpretability and compute efficiency are constraints, not preferences.
+Neural networks are excluded for now. The target deployment is an autonomous controller on constrained embedded hardware, possibly lunar — interpretability and compute efficiency are hard constraints. That said, neuromorphic chips (hardware that implements neural-network-like computation at a fraction of the power of conventional processors) could change this entirely. If the right hardware partnership materialises, a neuromorphic detector trained on real electrode data becomes a realistic next step.
 
 Real MOE/MRE electrode failure data is also on the roadmap. The current real-data validation uses NASA battery EIS data as a proxy. The next step is measured impedance time-series from an operating MOE cell via a data partnership.
 
