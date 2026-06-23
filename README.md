@@ -31,9 +31,32 @@ eis-simulation/
 
 ## Falsifiable claims
 
-**Synthetic data (notebook 03):** On a dataset of 120 degraded scenarios (60 oxidation + 60 evaporation) and 30 healthy baselines at SNR = 40 dB, CUSUM on fitted Rct achieves TPR = 100%, FPR = 0%, median lead time = 211 h before the Rct failure threshold. These numbers are not meaningful scientifically — the detector is matched to the data generator. They confirm the pipeline runs end-to-end.
+### Synthetic data — notebook 03
 
-**Real measured data (notebook 04):** On NASA Battery B0005 (278 EIS measurements over battery life, Saha & Goebel 2007), CUSUM on pre-fitted Rct detects degradation 28 charge cycles before end-of-life (80% capacity threshold) at threshold H = 3.0. The Rct signal is subtle — 38% rise over battery life vs. the 5× rise assumed in the MOE simulation. At thresholds ≥ 5.0, the detector fires after EOL. This is a real result on real measured data and is the meaningful validation.
+| Metric | Value |
+|--------|-------|
+| Dataset | 120 degraded (60 oxidation + 60 evaporation) + 30 healthy |
+| Noise model | Additive complex Gaussian, SNR = 40 dB |
+| TPR | 100% |
+| FPR | 0% |
+| Median lead time | 211 h before Rct failure threshold |
+
+**Verdict:** these numbers confirm the pipeline runs end-to-end. They are not scientifically meaningful — the detector is matched to the data generator. A detector tested on data it generated itself will always perform perfectly.
+
+---
+
+### Real measured data — notebook 04
+
+| Metric | Value |
+|--------|-------|
+| Dataset | NASA Battery B0005 — 278 EIS measurements over battery life |
+| Source | Saha & Goebel, NASA Prognostics Center, 2007 |
+| Rct rise over lifetime | 38% (subtle signal vs. 5× assumed for MOE) |
+| CUSUM threshold | H = 3.0 |
+| Detection lead time | 28 charge cycles before end-of-life |
+| At threshold H ≥ 5.0 | Detector fires after EOL — no useful warning |
+
+**Verdict:** this is the meaningful result. On real measured EIS data the detector fires before failure, but the signal is subtle and threshold tuning is non-trivial. The sensitivity/lead-time tradeoff is real.
 
 ## What this proves / what this does not prove
 
