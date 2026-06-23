@@ -93,6 +93,19 @@ Neural networks are explicitly excluded: the target deployment is an autonomous 
 
 Real MOE/MRE electrode failure data is also on the roadmap. The current real-data validation uses NASA battery EIS data as a proxy. The next step is measured impedance time-series from an operating MOE cell via a data partnership.
 
+## Do you have real MOE or MRE impedance data?
+
+If you are running MOE or MRE experiments and have EIS measurements taken over electrode lifetime — even partial data, even from a single cell — I would like to hear from you.
+
+What would be useful:
+- Impedance spectra (Re(Z), Im(Z) vs frequency) taken at intervals over electrode lifetime
+- Any record of when the electrode was replaced or when performance dropped
+- Operating conditions if available (current density, temperature, bath composition)
+
+The goal is to validate this detection approach on real reactor data and improve the algorithm together. If the method works on your data, you get a better tool for predicting electrode end-of-life. If it doesn't, we learn something useful about where the model breaks down.
+
+Get in touch: open an issue on this repo or reach out on X — [@Tocki28](https://x.com/Tocki28)
+
 ## Connection to the broader project
 
 This repo is subproblem P1 of a larger project: building an autonomous brain for MOE process control. The full system needs to make, in real time, the judgment calls that a human operator currently makes — electrode swap timing, current-density adjustments, fault isolation. P1 (electrode health via EIS) is the narrowest, most tractable subproblem with a clear falsifiable structure. The approach here — fit a physical model, track a derived parameter, apply a classical change-point test — is the template for how the broader system handles any sensor modality: parametric model first, black-box only if the parametric model fails.
