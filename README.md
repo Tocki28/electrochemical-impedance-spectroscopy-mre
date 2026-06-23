@@ -24,9 +24,16 @@ eis-simulation/
     ├── 01-randles-baseline.ipynb          Nyquist + Bode plots, parameter sensitivity sweeps.
     ├── 02-degradation-trajectories.ipynb  Spectrum evolution under degradation, normalised Rct
     │                                      as health indicator.
-    └── 03-detector-evaluation.ipynb       End-to-end evaluation: 120 degraded + 30 healthy
-                                           scenarios, ROC-like curve, lead time vs threshold,
-                                           CUSUM example trace.
+    ├── 03-detector-evaluation.ipynb       End-to-end evaluation: 120 degraded + 30 healthy
+    │                                      scenarios, ROC-like curve, lead time vs threshold,
+    │                                      CUSUM example trace.
+    ├── 04-real-data-nasa-battery.ipynb    Validation on real measured EIS data (NASA Battery
+    │                                      B0005, 278 impedance measurements). CUSUM fires
+    │                                      28 cycles before end-of-life at threshold H=3.0.
+    └── 05-your-own-data.ipynb             Run the detector on your own EIS data. Two input
+                                           formats: full spectra CSVs (fits Randles model) or
+                                           pre-fitted Rct time series. Includes threshold
+                                           sensitivity table for parameter tuning.
 ```
 
 ## Falsifiable claims
