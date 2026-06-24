@@ -75,35 +75,126 @@ The next validation step requires measured impedance time-series from an operati
 
 ## Installation and running
 
-Python 3.10+ required. Core dependencies: `impedance`, `numpy`, `scipy`, `matplotlib`.
+No programming experience required. Follow the steps for your operating system below. Each step tells you what to type and what to expect.
 
-**macOS** — open Terminal:
+---
+
+### macOS
+
+**Step 1 — Open Terminal.**
+Press `Cmd + Space`, type `Terminal`, and press Enter. A black or white window with a blinking cursor will open. This is where you type commands.
+
+**Step 2 — Check that Python is installed.**
+Type the following and press Enter:
+```
+python3 --version
+```
+You should see something like `Python 3.11.4`. If you get "command not found", download Python from [python.org/downloads](https://www.python.org/downloads/) and run the installer, then come back here.
+
+**Step 3 — Download this repository.**
+Type the following and press Enter (this copies all the code to your computer):
 ```
 git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
+```
+If you get "command not found", install Git from [git-scm.com](https://git-scm.com/download/mac) and repeat.
+
+**Step 4 — Navigate into the folder.**
+```
 cd electrochemical-impedance-spectroscopy-mre
-pip install -e ".[notebooks]"
+```
+
+**Step 5 — Install the required libraries.**
+```
+pip3 install -e ".[notebooks]"
+```
+This will download and install everything needed. It may take 1–2 minutes. You will see a lot of text scrolling — that is normal.
+
+**Step 6 — Open the notebooks.**
+```
 jupyter lab
 ```
-If `pip` is not found, use `pip3` or `python3 -m pip install -e ".[notebooks]"`.
+Your browser will open automatically with the Jupyter interface. Click on the `notebooks/` folder and open notebook `01-randles-baseline.ipynb` to start.
 
-**Windows** — install [Anaconda](https://www.anaconda.com/download) first if you don't have Python, then open Anaconda Prompt:
+---
+
+### Windows
+
+**Step 1 — Install Anaconda.**
+Anaconda is a free Python distribution that includes everything you need. Download it from [anaconda.com/download](https://www.anaconda.com/download) and run the installer. Accept all default options.
+
+**Step 2 — Open Anaconda Prompt.**
+Click the Start menu, search for `Anaconda Prompt`, and open it. A black window will appear. This is where you type commands.
+
+**Step 3 — Install Git (if not already installed).**
+Type the following and press Enter:
+```
+conda install git -y
+```
+
+**Step 4 — Download this repository.**
 ```
 git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
-cd electrochemical-impedance-spectroscopy-mre
-pip install -e ".[notebooks]"
-jupyter lab
 ```
 
-**Linux** — open a terminal:
+**Step 5 — Navigate into the folder.**
+```
+cd electrochemical-impedance-spectroscopy-mre
+```
+
+**Step 6 — Install the required libraries.**
+```
+pip install -e ".[notebooks]"
+```
+This may take 1–2 minutes. Text will scroll — that is normal.
+
+**Step 7 — Open the notebooks.**
+```
+jupyter lab
+```
+Your browser will open automatically with the Jupyter interface. Click on the `notebooks/` folder and open notebook `01-randles-baseline.ipynb` to start.
+
+---
+
+### Linux
+
+**Step 1 — Open a terminal.**
+On Ubuntu: press `Ctrl + Alt + T`. On other distributions, look for "Terminal" in your application menu.
+
+**Step 2 — Check that Python and pip are installed.**
+```
+python3 --version
+pip3 --version
+```
+If pip is missing, install it:
+- Ubuntu/Debian: `sudo apt install python3-pip`
+- Fedora: `sudo dnf install python3-pip`
+
+**Step 3 — Download this repository.**
 ```
 git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
+```
+
+**Step 4 — Navigate into the folder.**
+```
 cd electrochemical-impedance-spectroscopy-mre
-pip install -e ".[notebooks]"
+```
+
+**Step 5 — Install the required libraries.**
+```
+pip3 install -e ".[notebooks]"
+```
+
+**Step 6 — Open the notebooks.**
+```
 jupyter lab
 ```
-If `pip` is not found: `sudo apt install python3-pip` (Ubuntu/Debian) or `sudo dnf install python3-pip` (Fedora).
+Your browser will open automatically. Click on the `notebooks/` folder and open notebook `01-randles-baseline.ipynb` to start.
 
-Run notebooks in order: 01 → 02 → 03 → 04 → 05. Each notebook is self-contained but 03 imports `detector.py` and uses degradation trajectories from `degradation_sim.py`. Notebook 04 requires the NASA Battery Dataset (see notebook for download link). Notebook 05 accepts your own EIS data.
+---
+
+### Running the notebooks
+
+Open them in order: **01 → 02 → 03 → 04 → 05**. Each notebook runs independently — click into a cell and press `Shift + Enter` to run it, then move to the next. Notebook 04 requires the NASA Battery Dataset (the notebook contains the download link and instructions). Notebook 05 is for your own EIS data.
 
 ## What comes next
 
