@@ -75,8 +75,18 @@ The next validation step requires measured impedance time-series from an operati
 
 ## Installation and running
 
-Works on macOS, Windows, and Linux. On Windows use Anaconda Prompt or Git Bash.
+Python 3.10+ required. Core dependencies: `impedance`, `numpy`, `scipy`, `matplotlib`.
 
+**macOS** — open Terminal:
+```
+git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
+cd electrochemical-impedance-spectroscopy-mre
+pip install -e ".[notebooks]"
+jupyter lab
+```
+If `pip` is not found, use `pip3` or `python3 -m pip install -e ".[notebooks]"`.
+
+**Windows** — install [Anaconda](https://www.anaconda.com/download) first if you don't have Python, then open Anaconda Prompt:
 ```
 git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
 cd electrochemical-impedance-spectroscopy-mre
@@ -84,9 +94,16 @@ pip install -e ".[notebooks]"
 jupyter lab
 ```
 
-Run notebooks in order: 01 → 02 → 03 → 04 → 05. Each notebook is self-contained but 03 imports `detector.py` and uses degradation trajectories from `degradation_sim.py`. Notebook 04 requires the NASA Battery Dataset (see notebook for download link). Notebook 05 accepts your own EIS data.
+**Linux** — open a terminal:
+```
+git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
+cd electrochemical-impedance-spectroscopy-mre
+pip install -e ".[notebooks]"
+jupyter lab
+```
+If `pip` is not found: `sudo apt install python3-pip` (Ubuntu/Debian) or `sudo dnf install python3-pip` (Fedora).
 
-Python 3.10+ recommended. Core dependencies: `impedance`, `numpy`, `scipy`, `matplotlib`.
+Run notebooks in order: 01 → 02 → 03 → 04 → 05. Each notebook is self-contained but 03 imports `detector.py` and uses degradation trajectories from `degradation_sim.py`. Notebook 04 requires the NASA Battery Dataset (see notebook for download link). Notebook 05 accepts your own EIS data.
 
 ## What comes next
 
