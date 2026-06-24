@@ -94,7 +94,7 @@ You need version **3.10 or higher**. macOS ships with Python 3.9 by default, whi
 **Step 3 - Update pip.**
 This ensures the installer itself is up to date:
 ```
-pip3 install --upgrade pip
+python3 -m pip install --upgrade pip
 ```
 
 **Step 4 - Download this repository.**
@@ -111,7 +111,7 @@ cd electrochemical-impedance-spectroscopy-mre
 
 **Step 6 - Install the required libraries.**
 ```
-pip3 install -e ".[notebooks]"
+python3 -m pip install -r requirements.txt
 ```
 This will download and install everything needed. It may take 1–2 minutes. You will see a lot of text scrolling - that is normal.
 
@@ -149,9 +149,9 @@ cd electrochemical-impedance-spectroscopy-mre
 
 **Step 6 - Install the required libraries.**
 ```
-pip install -e ".[notebooks]"
+python3 -m pip install -r requirements.txt
 ```
-This may take 1–2 minutes. Text will scroll - that is normal.
+This may take 1-2 minutes. Text will scroll - that is normal.
 
 **Step 7 - Open the notebooks.**
 ```
@@ -187,8 +187,9 @@ cd electrochemical-impedance-spectroscopy-mre
 
 **Step 5 - Install the required libraries.**
 ```
-pip3 install -e ".[notebooks]"
+python3 -m pip install -r requirements.txt
 ```
+This may take 1-2 minutes. Text will scroll - that is normal.
 
 **Step 6 - Open the notebooks.**
 ```
