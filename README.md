@@ -75,14 +75,16 @@ The next validation step requires measured impedance time-series from an operati
 
 ## Installation and running
 
-```bash
+Works on macOS, Windows, and Linux. On Windows use Anaconda Prompt or Git Bash.
+
+```
 git clone https://github.com/tocki28/electrochemical-impedance-spectroscopy-mre.git
 cd electrochemical-impedance-spectroscopy-mre
 pip install -e ".[notebooks]"
 jupyter lab
 ```
 
-Run notebooks in order: 01 → 02 → 03. Each notebook is self-contained but 03 imports `detector.py` and uses degradation trajectories from `degradation_sim.py`.
+Run notebooks in order: 01 → 02 → 03 → 04 → 05. Each notebook is self-contained but 03 imports `detector.py` and uses degradation trajectories from `degradation_sim.py`. Notebook 04 requires the NASA Battery Dataset (see notebook for download link). Notebook 05 accepts your own EIS data.
 
 Python 3.10+ recommended. Core dependencies: `impedance`, `numpy`, `scipy`, `matplotlib`.
 
